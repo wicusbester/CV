@@ -1,0 +1,126 @@
+\documentclass[11pt,a4paper]{article}
+
+%-----------------------------------------------------------
+% Packages
+%-----------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+%-----------------------------------------------------------
+% Formatting Options
+%-----------------------------------------------------------
+\pagestyle{empty} % Removes page numbers
+\titleformat{\section}{\Large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1ex}{1ex} % Adjust spacing around section headers
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+%-----------------------------------------------------------
+% Custom Commands
+%-----------------------------------------------------------
+% Command for work experience and education headers
+\newcommand{\resumeHeading}[4]{
+  \vspace{2pt}\begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+%-----------------------------------------------------------
+% Document Starts Here
+%-----------------------------------------------------------
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{Wicus Bester}} \\ \vspace{5pt}
+    Cape Town, South Africa \\
+    071 549 1909 $|$ \href{mailto:}{wicus.bester@gmail.com} $|$ \href{https://www.linkedin.com/in/wicus-bester/}{linkedin.com/in/wicus-bester/}
+\end{center}
+
+%-----------------------------------------------------------
+% Education
+%-----------------------------------------------------------
+\section{Education}
+  \resumeHeading
+    {Stellenbosch University}{Stellenbosch, SA}
+    {Bachelor of Science in Computer Science}{Jan 2024 -- Dec 2027}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+       \textbf{GPA} 3.8/4.0 \\
+      }}
+    \end{itemize}
+
+%-----------------------------------------------------------
+% Experience
+%-----------------------------------------------------------
+\section{Experience}
+  \resumeHeading
+    {Gendac}{Cape Town, South Africa}
+    {Student vacation worker}{Two weeks in Jan 2026}
+
+  \vspace{5pt}
+
+  \resumeHeading
+    {Durbanville High School}{Cape Town, South Africa}
+    {Technical Team Lead}{2020 -- 2023}
+    \begin{itemize}[leftmargin=0.15in]
+      \small{
+      \item Managed team of roughly 10 students, alongside a felow team lead, for school events.
+      \item Hired to plan, facilitate and lead all technical aspects of events for clients using the school venue. These events include shows for well-known artists/bands and 
+      \item Hired by the school to collaborate with professional technical teams as the representative for the school auditorium.
+      \item Toured nationally with the School Theater group as the sound operator, receiving various awards for my work at festivals.  
+      }
+    \end{itemize}
+
+  \vspace{5pt}
+
+  \resumeHeading
+    {Community Service}{South Africa}
+    {Various}{2019 - present}
+    \begin{itemize}[leftmargin=0.15in]
+      \small{
+      \item Volunteer as Sound operator at church. 
+      \item Qualified technical offical for Judo SA.
+      }
+    \end{itemize}
+
+%-----------------------------------------------------------
+% Projects
+%-----------------------------------------------------------
+\section{Projects}
+  \begin{itemize}[leftmargin=0.15in]
+    \small{
+    \item \textbf{Project Name} $|$ \emph{Technologies Used} \hfill \href{https://github.com/yourlink}{GitHub Link} \\
+    A brief description of the project, the problem it solved, and the impact it had.
+    
+    \vspace{3pt}
+    
+    \item \textbf{Another Project} $|$ \emph{Technologies Used} \\
+    Description of your role in building this project and specific features you implemented.
+    }
+  \end{itemize}
+
+%-----------------------------------------------------------
+% Skills
+%-----------------------------------------------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, C++, SQL, JavaScript, HTML/CSS} \\
+     \textbf{Frameworks}{: React, Node.js, Django, Spring Boot} \\
+     \textbf{Tools}{: Git, Docker, AWS, Linux, Jira}
+    }}
+ \end{itemize}
+
+\end{document}

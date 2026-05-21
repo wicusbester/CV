@@ -1,187 +1,195 @@
 \documentclass[11pt,a4paper]{article}
 
-%-----------------------------------------------------------
-% Packages
-%-----------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\usepackage[margin=0.6in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{fontawesome5}
 \usepackage[sfdefault]{inter} 
-\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[bottom]{footmisc}
 
 
-%-----------------------------------------------------------
-% Formatting Options
-%-----------------------------------------------------------
-\pagestyle{empty} % Removes page numbers
-\titleformat{\section}{\Large\bfseries\uppercase}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1ex}{1ex} % Adjust spacing around section headers
-% \setlist[itemize]{topsep=2pt, leftmargin=1.2em}
+% formatting
+\definecolor{Orange}{HTML}{B37300}
+\definecolor{OrangeDark}{HTML}{A16800}
+\definecolor{OrangeLight}{HTML}{A16800}
+
+\pagestyle{empty}
+\titleformat{\section}{\color{Orange}\Large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1ex}{1ex}
+\setlist[itemize]{topsep=2pt, leftmargin=1.2em}
+\hyphenpenalty=10000
 
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=blue,
+    colorlinks=true,    
+    urlcolor=OrangeLight,
+    linkcolor=OrangeLight,
 }
 
-%-----------------------------------------------------------
-% Custom Commands
-%-----------------------------------------------------------
-% Command for work experience and education headers
-\newcommand{\resumeHeading}[4]{
+\newcommand{\cvEntry}[4]{
   \noindent\vspace{2pt}\begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{0pt}
 }
 
-%-----------------------------------------------------------
-% Document Starts Here
-%-----------------------------------------------------------
-\begin{document}
 
-% Header
+
+
+\begin{document}
 \begin{center}
     {\Huge \textbf{\texttt{WICUS BESTER}}} \\ \vspace{5pt}
     \faMapMarker* Cape Town, South Africa \\
     \faPhone* 071 549 1909 \quad
-    \faEnvelope \href{mailto:}{wicus.bester@gmail.com} \quad \\
+    \faEnvelope \href{mailto:wicus.bester@gmail.com}{wicus.bester@gmail.com} \quad \\
     \faLinkedin \href{https://www.linkedin.com/in/wicus-bester/}{linkedin.com/in/wicus-bester/} \quad
     \faGithub \href{https://github.com/wicusbester}{github.com/wicusbester}
 \end{center}
 
 \section{About Myself}
-I am a $3^{rd}$ Year BSc Computer Science student from Stellenbosch University,
-working to graduate at the end of 2026. I matriculated from Durbanville High School in 2023.
+I am a third Year BSc Computer Science student from Stellenbosch University,
+working to graduate at the end of 2026. I matriculated from Durbanville High School in 2023
+and started working towards my degree the following year.
 
-I have always had an interest in computers and STEM. I find problem solving fun and 
+I have always had an interest in computers and STEM. I find problem solving fun and extremely rewarding, especially when
+it results in me learning something new. I am hard working and do my best at everything I commit myself to. I believe
+that what you put in is what you will get out of life. Nothing comes by itself; there are no shortcuts in life.
+You must work hard to achieve your goals.
 
-%-----------------------------------------------------------
-% Education
-%-----------------------------------------------------------
-\section{Education}\extracolsep{\fill}
-  \resumeHeading
-    {Stellenbosch University}{Stellenbosch, SA}
-    {Bachelor of Science in Computer Science}{Jan 2024 -- Dec 2027}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-      \item \textbf{Mark To Date}
-      \footnote{Final mark for my degree as of academic records available in May of 2026}
-      00 \%
-      \item \textbf{Degree Stream:} General Computer Science. As elective modules I took Applied Math and/or Opperations Research for the most part.\footnote{Please see my attached academic record and the \href{https://www.su.ac.za/en/about/governance/registrar/yearbooks}{science faculty yearbook} for more information on elective modules.}
-    \end{itemize}
+As for the future, I am considering doing my Honours in Computer Science at Stellenbosch University in 2027, but
+this is not yet confirmed. Therefore entering the work force is also a possibility.
+
+
+\section{Education}
+  \cvEntry
+    {Stellenbosch University}{Stellenbosch, South Africa}
+    {Bachelor of Science in Computer Science}{2024 -- 2026}
+      \begin{itemize}[leftmargin=0.15in, label={}, noitemsep]
+        \small
+        \item \textbf{Mark To Date:}
+          \footnote{Final mark for my degree as of academic records available in May of 2026}
+          $73.71\%$
+        \item \textbf{Degree Stream:} General Computer Science. As elective modules I mostly
+          choose Applied Math and/or Operations Research.
+          \footnote{Please see my attached academic record and the
+            \href{https://www.su.ac.za/en/about/governance/registrar/yearbooks}{science faculty yearbook}
+            for more information on elective modules.}
+      \end{itemize}
 
   \vspace{5px} \hrule \vspace{5px}
 
-  \resumeHeading
-    {Durbanville High School}{Durbanville, SA}
-    {National Senior Sertificate}{2019 -- 2023}
-
-    \textbf{NSS Final mark:} 88\%
-
-    \vspace{2pt}
-
-    \textbf{Notable Achivements during secondary education:}
-  
-    \begin{itemize}[leftmargin=1em, noitemsep]
-      \item Academic:
-        \begin{itemize}[leftmargin=1em, font=\normalfont, noitemsep]
-          \item Information Technology (IT) | Best mark in year \hfill 2023
-          \item Merit award for A-average \hfill 2019 -- 2020
-          \item Academic Colours for A-average \hfill 2021 -- 2023
-        \end{itemize}
-      \item Leadership:
-        \begin{itemize}[leftmargin=1em, font=\normalfont, noitemsep]
-          \item Member of the Student Council \hfill 2023
-          \item Mentor for four grade 8 boys \hfill 2023
-        \end{itemize}
-      \item Other:
-        \begin{itemize}[leftmargin=1em, font=\normalfont, noitemsep]
-          \item Judy Potgieter Trophy | For leaving a lasting positive impact \hfill 2023
-          \item Merit award for senior Technical Team Member \hfill 2021 -- 2023
-          \item Received Black Belt (Sho-Dan or 1st Dan) for Judo \hfill 2021
-        \end{itemize}
+  \cvEntry
+    {Durbanville High School}{Durbanville, South Africa}
+    {National Senior Certificate}{2019 -- 2023}
+    \begin{itemize}[label={}, noitemsep]
+      \small
+      \item \textbf{NSS Results:} 88\% Average, with distinctions in all 7 subjects.
+      \item \textbf{Notable Achievements during secondary education:}
+      \item \begin{itemize}[leftmargin=2em, noitemsep, label={\textbullet}]
+        \item Academic:
+          \begin{itemize}[leftmargin=1em, font=\normalfont, noitemsep, label={-}]
+            \item Information Technology (IT) | Best mark in year \hfill 2023
+            \item Merit award for A-average \hfill 2019 -- 2020
+            \item Academic Colours for A-average \hfill 2021 -- 2023
+          \end{itemize}
+        \item Leadership:
+          \begin{itemize}[leftmargin=1em, font=\normalfont, noitemsep, label={-}]
+            \item Member of the Student Council \hfill 2023
+            \item Mentor for four grade 8 boys \hfill 2023
+          \end{itemize}
+        \item Other:
+          \begin{itemize}[leftmargin=1em, font=\normalfont, noitemsep, label={-}]
+            \item Judy Potgieter Trophy | For leaving a lasting positive impact \hfill 2023
+            \item Merit award for senior Technical Team Member \hfill 2021 -- 2023
+            \item Received Black Belt (Sho-Dan or 1st Dan) for Judo \hfill 2021
+          \end{itemize}
+      \end{itemize}
     \end{itemize}
 
-%-----------------------------------------------------------
-% Experience
-%-----------------------------------------------------------
+
+
 \section{Experience}
-  \resumeHeading
+  \cvEntry
     {Gendac}{Cape Town, South Africa}
-    {Student vacation worker}{Two weeks in Jan 2026}
+    {Student Vacation Work Internship}{Two weeks in Jan 2026}
+    \begin{itemize}[leftmargin=2em, noitemsep]
+      \small
+      \item Worked in a team with two other interns to build a Habit Tracker mobile app.
+      \item Used C\#, .NET MAUI and ASP.NET Core.
+      \item Improved my teamwork and communication skills.
+      \item Experienced the real-world events of a developer in the workplace.
+    \end{itemize}
 
   \vspace{5px} \hrule \vspace{5px}
 
-  \resumeHeading
+  \cvEntry
     {Durbanville High School}{Cape Town, South Africa}
     {Technical Team Lead}{2020 -- 2023}
-    \begin{itemize}[leftmargin=0.15in, noitemsep]
-      \small{
-      \item Managed a team of roughly 10 students, alongside a felow team lead, for school events.
-      \item Hired privately to plan, facilitate and lead all technical aspects of events for clients using the school venue. These events include shows for well-known artists/bands and other public figures.
-      \item Hired by the school to collaborate with professional technical teams as the representative for the school auditorium.
+    \begin{itemize}[leftmargin=2em, noitemsep]
+      \small
+      \item Managed a team of roughly 10 students, alongside a fellow team lead, for school events.
+      \item Hired privately to plan, facilitate and lead all technical aspects of events for clients
+            using the school's various venues. These events include shows for well-known artists, bands and other public figures.
+      \item Hired by the school to collaborate with professional technical teams as the representative for the school's 800 seat auditorium.
       \item Toured nationally with the School Theater group as the sound operator, receiving various awards for my work at festivals.  
-      }
     \end{itemize}
 
   \vspace{5px} \hrule \vspace{5px}
 
-  \resumeHeading
+  \cvEntry
     {Community Service}{South Africa}
     {Various}{2019 - present}
     \begin{itemize}[leftmargin=0.15in, noitemsep]
-      \small{
-      \item Volunteer as Sound operator at churches.
-      \item Qualified technical offical for Judo SA.
-      }
+      \small
+      \item Volunteer Sound operator at churches.
+      \item Qualified technical official for Judo SA.
     \end{itemize}
 
-%-----------------------------------------------------------
-% Projects
-%-----------------------------------------------------------
+
 \section{Projects}
-  \begin{itemize}[leftmargin=0.15in]
-    \small{
+  \begin{itemize}[leftmargin=1em]
     \item \textbf{Casecompare}\footnote{This project is not publicly available because of copyright reasons and as per mutual agreement with the module coordinator.} $|$ \emph{Python, SQL} \\
-    Casecompare provided an easy way for students to compare the outputs of their implementations of the 2024 First Year Computer Science project, without their code ever leaving their computer.
-    Lecturers encouraged students to test their outputs against eachother, but this proved to be a logistical nightmare. Casecompare had two parts: A backend Discord bot (written in Python with an sqlite database) to gather outputs and testcases from students, and a Python script that spoofed the randomness of the project and locally ran testcases against a students code.
-    }
+    \small
+    Casecompare provided an easy way for students to compare the outputs of their implementations of the
+      2024 First Year Computer Science project, without their code ever leaving their computer.
+      Lecturers encouraged students to test their outputs against each other, but this proved to be a
+      logistical nightmare. Casecompare had two parts: A backend Discord bot
+      (written in Python with an sqlite database) to gather outputs and testcases from students,
+      and a Python script that spoofed the randomness of the project and locally ran testcases against a students code.
   \end{itemize}
 
-%-----------------------------------------------------------
-% Skills
-%-----------------------------------------------------------
+
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, noitemsep]
-     \item \textbf{Languages}{: Java, Python, C, C\#, SQL, MATLAB, Basic HTML/CSS} 
-     \item \textbf{Frameworks \& Tools}{: Git, .NET, Tailscale, NumPy, Scipy, Simpy, Matplotlib, NeoVim, VScode, VisualStudio, Basic \LaTeX}
-     \item \textbf{Environments}{: Git, Ubuntu Linux, Windows, Proxmox VE, Docker}
-    %  \item \textbf{Core Skills}{: Skills taught by The Stellenbosch University BSc Computer Science curriculum, such as d}
+     \item \textbf{Languages:}{ Java, Python, C, C\#, SQL, MATLAB, Basic HTML/CSS} 
+     \item \textbf{Frameworks \& Tools:}{ Git, .NET, Tailscale, NumPy, Scipy, Simpy, Matplotlib, NeoVim, VScode, VisualStudio, Basic \LaTeX}
+     \item \textbf{Environments:}{ Git, Ubuntu Linux, Windows, Proxmox VE, Docker}
+     \item \textbf{Basic Numerical Analysis:}{ Skills taught in the Stellenbosch University Applied Math 324 course.}
 
  \end{itemize}
 
 \section{Soft Skills}
 \begin{description}[noitemsep, leftmargin=4cm, style=multiline]
-  \item [Dependability] Long standing track record of exceeding expectations while meeting deadlines
+  \item [Dependability] Long-standing track record of exceeding expectations while meeting deadlines.
   \item [Logical Thinker] Strong Problem Solving skills and the ability to find innovative solutions. Strong decision making skills. Fully computer literate.
   \item [Collaboration] Ample experience working in teams at University and Vacation work (including for collaborative coding)
   \item [Life Long Learner] I enjoy learning new skills and firmly belive there is always more to learn
   \item [Reliability] Can function well under pressure. Honest and Loyal.
-  \item [Flexable] Can easly addapt to different situations, such as quickly switching languages and paradigms.
+  \item [Flexable] Can easily adapt to different situations, such as quickly switching languages and paradigms.
 \end{description}
 
 
-\section{Intrests/Hobbys}
+\section{Interests/Hobbies}
 \begin{itemize}[leftmargin=0.15in, noitemsep]
   \item \textbf{Homelab:} I enjoy tinkering with computers and networks, and I self host many services for the fun of it.
-  \item \textbf{'Edutainment':} (Educational Entertainment in STEM fields or documentaries.) The majority of the content I consume has some sort of educational element. Think \href{https://www.veritasium.com/}{Veritasium}, \href{https://www.youtube.com/@fern-tv}{Fern}, \href{https://stevemould.com/}{Steve Mould}, ect.
-  % \item \textbf{Occational Gaming:} 
+  \item \textbf{'Edutainment':} (Educational Entertainment in STEM fields or documentaries.) The majority of the content
+    I consume has some sort of educational element. Think \href{https://www.veritasium.com/}{Veritasium},
+    \href{https://www.youtube.com/@fern-tv}{Fern}, \href{https://stevemould.com/}{Steve Mould}, ect.
+  \item \textbf{Hiking:} Occasional casual hikes with friends to experience the wonders of our country.
 \end{itemize}
 
 \end{document}
